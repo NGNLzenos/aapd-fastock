@@ -416,6 +416,19 @@ $theme-colors: (
   "accent-800": $accent-800,
   "accent-900": $accent-900,
 
+  "neutral-50": $neutral-50,
+  "neutral-100": $neutral-100,
+  "neutral-200": $neutral-200,
+  "neutral-300": $neutral-300,
+  "neutral-400": $neutral-400,
+  "neutral-500": $neutral-500,
+  "neutral-600": $neutral-600,
+  "neutral-700": $neutral-700,
+  "neutral-800": $neutral-800,
+  "neutral-900": $neutral-900,
+  "neutral-950": $neutral-950,
+  "neutral": $neutral,
+
   "white": $white,
   "black": $black,
   "red-500": $red-500,
@@ -572,7 +585,7 @@ $spacers: (
   // 80
   // 其他間距變數
   1p: 1px,
-  6p: 6px,
+  6p: 6px
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -804,7 +817,7 @@ $font-weight-bolder: bolder !default;
 
 $font-weight-base: $font-weight-bold !default; // 原為normal
 
-$line-height-base: 1.5 !default;
+$line-height-base: 1.4 !default; // 原為1.5
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
@@ -832,7 +845,7 @@ $headings-margin-bottom: $spacer * 0.5 !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
 $headings-font-weight: 500 !default;
-$headings-line-height: 1.2 !default;
+$headings-line-height: 1.4 !default; // 原為1.2
 $headings-color: inherit !default;
 // scss-docs-end headings-variables
 
