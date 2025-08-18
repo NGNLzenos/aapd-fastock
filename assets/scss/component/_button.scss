@@ -1,0 +1,195 @@
+// icon padding+bdrs
+.icon-M {
+  @include icon-size;
+}
+.icon-S {
+  @include icon-size(8px, 12px);
+}
+
+// primary icon button ---
+// filled --
+.icon-primary-fill {
+  @include icon-color;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+  &:focus {
+    border: 1px solid $primary-800;
+    box-shadow: 0px 0px 0px 2px $primary-50;
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+// outline --
+.icon-primary-outline {
+  @include icon-color($primary, $white);
+  border: 1px solid $primary;
+  &:hover {
+    @include icon-hover-style;
+  }
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $primary-50;
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+// nonline --
+.icon-primary-nonline {
+  @include icon-color($primary, $white);
+  border: none;
+  &:hover {
+    @include icon-hover-style;
+  }
+  &:focus {
+    border: 1px solid $primary-800;
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+// secondary icon button
+// filled --
+.icon-secondary-fill {
+  @include icon-color($i-bg-color: $secondary);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+  &:focus {
+    border: 1px solid $secondary-900;
+    box-shadow: 0px 0px 0px 2px $secondary-400;
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+// outline --
+.icon-secondary-outline {
+  @include icon-color($secondary, $white);
+  border: 1px solid $secondary-700;
+  &:hover {
+    @include icon-hover-style($secondary-100);
+  }
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $secondary-400;
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+// nonline --
+.icon-secondary-nonline {
+  @include icon-color($secondary, $white);
+  border: none;
+  &:hover {
+    @include icon-hover-style($secondary-100);
+  }
+  &:focus {
+    border: 1px solid $secondary-900;
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+// In card button
+.inCardIcon-M {
+  @include icon-size(12px, 12px);
+}
+.inCardIcon-S {
+  @include icon-size(8px, 12px);
+}
+// add-to-cart
+.inCardCart {
+  @include icon-color($black, $white);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+  &:focus,
+  &:active {
+    @include icon-color($white);
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+// add-to-fav
+.inCardFav {
+  @include icon-color($neutral, $white);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  // 愛心實心狀態
+  &.is-active {
+    @include icon-color($error, $white);
+
+    .heart-path {
+      d: path(
+        "M12.0006 4.71122C14.2946 2.42352 17.9983 2.43017 20.2838 4.73173C22.5719 7.03671 22.572 10.7715 20.2838 13.0765L12.8873 20.5257C12.3985 21.018 11.6027 21.0178 11.1138 20.5257L3.71735 13.0765C1.42885 10.7715 1.42885 7.03674 3.71735 4.73173C6.00289 2.43028 9.70662 2.42341 12.0006 4.71122Z"
+      );
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// icon樣式設定
+// icon size 預設為medium
+@mixin icon-size($p-sz: 12px, $bdrs-sz: 16px) {
+  padding: $p-sz;
+  border-radius: $bdrs-sz;
+}
+@mixin icon-color($i-color: $white, $i-bg-color: $primary) {
+  color: $i-color;
+  background-color: $i-bg-color;
+}
+@mixin icon-hover-style($i-h-bg-color: $primary-50) {
+  background: $i-h-bg-color;
+  transition: opacity 0.3s ease;
+}
