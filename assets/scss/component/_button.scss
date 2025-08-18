@@ -158,7 +158,7 @@
     opacity: 0.4;
   }
 }
-// add-to-fav
+// add-to-fav 需搭配JS切換
 .inCardFav {
   @include icon-color($neutral, $white);
   border: none;
@@ -182,7 +182,7 @@
     opacity: 1;
   }
 
-  // 愛心實心狀態
+  // 愛心實心狀態 需搭配JS切換
   &.is-active {
     @include icon-color($error, $white);
 
