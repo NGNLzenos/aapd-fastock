@@ -172,3 +172,157 @@
     }
   }
 }
+
+
+// ------- TOP 鈕 --------
+
+.scroll-top-btn {
+  width: 64px;
+  height: 64px;
+  background-color: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px 0px hsla(0, 0%, 0%, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  z-index: 1000;
+
+  &::before {
+    content: "";  
+    display: block;
+    padding: 20px;
+    background: url('/assets/images/icon/icon-scroll-to-top.svg') no-repeat center/contain;
+  }
+
+  &:hover{
+    background-color: #F5F5F5;
+  }
+}
+
+@include size-lg{
+  .scroll-top-btn {
+    width: 80px;
+    height: 80px;
+    right: 60px;
+    bottom: 80px;
+  }
+}
+
+
+// ----- 人氣標籤樣式
+
+.tag{
+  &-m{
+    padding: 8px 12px;
+    font-size: 14px;
+    margin: 16px;
+
+  }
+  &-s{
+    padding: 4px 8px;
+    font-size: 12px;
+    margin: 8px;
+
+  }
+}
+
+.tag-yellow{
+  font-weight: 500;
+  line-height: 1.4;
+  background-color: $orange-100;
+  color: $neutral;
+  display: inline-block;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  &::before {
+    content: "人氣"; 
+  }
+}
+
+.tag-pink{
+  font-weight: 500;
+  line-height: 1.4;
+  background-color: $rose-100;
+  color: $neutral;
+  display: inline-block;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  &::before {
+    content: "促銷"; 
+  }
+}
+
+.tag-blue{
+  font-weight: 500;
+  line-height: 1.4;
+  color: $neutral;
+  display: inline-block;
+  border-radius: 8px;
+  background-color: $teal-100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  &::before {
+    content: "每週免費"; 
+  }
+}
+
+
+
+
+// ----- 漸變遮罩樣式
+.gradient{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom,  rgba(0, 0, 0, 0.05) 5%,rgba(0, 0, 0, 0.70) 70%);
+  opacity: 0;        
+  transition: opacity 0.5s;
+  &:hover{
+  opacity: 1;
+  }
+
+}
+
+// ----- checkbox 按鈕樣式
+.form-check-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: $primary;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 0.25rem;
+  border: 1.5px solid $secondary-900;
+  cursor: pointer;
+  transition: all 0.2s;
+  
+}
+
+.form-check-input:checked {
+  background-color: currentColor;
+  border-color: currentColor;
+}
+
+
+.checkbox-secondary {
+  color: $secondary;
+}
+
+
+
+

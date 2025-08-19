@@ -12,3 +12,9 @@
   background: $i-h-bg-color;
   transition: opacity 0.3s ease;
 }
+
+@mixin size-lg{
+    @media (min-width:992px){
+        @content;
+    }
+}
