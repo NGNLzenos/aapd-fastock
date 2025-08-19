@@ -1,13 +1,14 @@
-@mixin bold-text-style($size, $weight: bold) {
-  font-size: $size;
-  line-height: 1.4;
-  font-weight: $weight;
-  font-family: "Noto Sans TC", sans-serif;
+// system icon樣式設定
+// icon size 預設為medium
+@mixin icon-size($p-sz: 12px, $bdrs-sz: 16px) {
+  padding: $p-sz;
+  border-radius: $bdrs-sz;
 }
-
-@mixin text-style($size, $weight: 400) {
-  font-size: $size;
-  line-height: 1.4;
-  font-weight: $weight;
-  font-family: "Noto Sans TC", sans-serif;
+@mixin icon-color($i-color: $white, $i-bg-color: $primary) {
+  color: $i-color;
+  background-color: $i-bg-color;
+}
+@mixin icon-hover-style($i-h-bg-color: $primary-50) {
+  background: $i-h-bg-color;
+  transition: opacity 0.3s ease;
 }
