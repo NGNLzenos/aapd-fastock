@@ -1,14 +1,28 @@
 // system icon樣式設定
 // icon size預設為medium
-@mixin icon-size($p-sz: 12px, $bdrs-sz: 16px) {
-  padding: $p-sz;
+@mixin icon-size(
+  $py-sz: 12px,
+  $px-sz: 12px,
+  $bdrs-sz: 16px,
+  $w-sz: 48px,
+  $h-sz: 48px
+) {
+  padding: $py-sz $px-sz;
   border-radius: $bdrs-sz;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $w-sz;
+  height: $h-sz;
+  flex-shrink: 0;
 }
 @mixin icon-base(
   $bd-base: none,
   $position-base: relative,
   $overflow-base: hidden
 ) {
+  display: flex;
+  align-items: center;
   border: $bd-base;
   position: $position-base;
   overflow: $overflow-base;
@@ -19,8 +33,8 @@
   color: $i-color;
   background-color: $i-bg-color;
 }
-@mixin icon-border($i-border: 1px solid $primary) {
-  border: $i-border;
+@mixin icon-border($i-border: $primary) {
+  border: 1px solid $i-border;
 }
 // icon hover style
 @mixin icon-hover-style($i-h-bg-color: $primary-50) {
