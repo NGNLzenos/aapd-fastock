@@ -4,11 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>快素 Fastock</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/logo icon.svg"
+    />
+    <title>貓咪家庭 ｜ 相片 | 快素 Fastock</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
+    <%- include('./layout/sroll-top-btn.ejs'); -%>
     
+    
+
+    <div class="m-6 ">
+      <div class="card  w-50 mx-auto">
+        <div class="position-relative">
+          <img src="/assets/images/Homepage/card 1.png" class="card-img-top w-100 "  alt="...">
+          <span class="tag-m tag-blue"></span>
+          <div class="gradient"></div>
+        </div>
+        <div class="card-body">
+          <h5>貓凹貓貓貓ㄠ</h5>
+          <p>al la la laalla lalalalalalalalalala l</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-6">
+      <div class="form-check">
+        <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          primary色
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input checkbox-secondary" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          secondary色
+        </label>
+      </div>
+    </div>
+
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

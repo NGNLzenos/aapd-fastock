@@ -1,112 +1,202 @@
-<header class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+<header>
+  <!-- 首頁nav-bar -->
+  <nav class="navbar navbar-expand-lg navbar-white bg-white fs-md mx-12">
+    <div
+      class="container-fluid d-flex justify-content-between align-items-center"
+    >
+      <!-- 首頁logo -->
       <a class="navbar-brand" href="#"
-        ><img src="/assets/images/logo-desktop.svg" alt="logo-desktop"
-      /></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="d-flex mx-auto">
-          <div class="input-group">
-            <button
-              class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              全部
-              <img
-                src="/assets/images/icon/icon-arrow-down.svg"
-                alt="icon-arrow-down"
-              />
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">全部</a></li>
-              <li><a class="dropdown-item" href="#">圖片</a></li>
-              <li><a class="dropdown-item" href="#">影片</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">其他</a></li>
-            </ul>
-
-            <span
-              class="input-group-text bg-white border-secondary border-start-0"
-            >
-              <img
-                src="/assets/images/icon/icon-search.svg"
-                alt="icon-search"
-              />
-            </span>
-
-            <input
-              class="form-control border-secondary border-start-0 border-end-0"
-              type="search"
-              placeholder="搜尋數百萬創意資源"
-              aria-label="Search"
-            />
-
-            <button
-              class="btn btn-outline-secondary bg-white border-start-0"
-              type="button"
-            >
-              <img
-                src="/assets/images/icon/icon-camera.svg"
-                alt="icon-camera"
-              />
-            </button>
-          </div>
-        </form>
-        <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
-          <li class="nav-item">
-            <a class="btn btn-primary" href="#" role="button">登入</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-white border" href="#" role="button"
-              >註冊</a
-            >
-          </li>
-          <li>
-            <button class="btn btn-outline-secondary" type="button">
-              <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <ul
-    class="container d-flex justify-content-center align-items-center main-nav"
-  >
-    <li class="nav-item-dropdown position-relative">
-      <a href="contact.html" class="nav-link">contact</a>
-      <ul class="dropdown-menu-hover">
-        <li>
-          <a href="reserve.html" class="nav-link">預約訂位</a>
+        ><img
+          class="d-none d-lg-block"
+          src="/assets/images/logo-desktop.svg"
+          alt="logo-desktop"
+        />
+        <img
+          class="d-lg-none"
+          src="/assets/images/logo-mobile.svg"
+          alt="logo-mobile"
+        />
+      </a>
+      <!-- pc search-bar -->
+      <form class="d-flex mx-auto d-none d-lg-block">
+        <div class="input-group btn-select">
+          <!-- 下拉式搜尋 -->
+          <button
+            class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            全部
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">全部</a></li>
+            <li><a class="dropdown-item" href="#">圖片</a></li>
+            <li><a class="dropdown-item" href="#">影片</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">其他</a></li>
+          </ul>
+          <span class="divider d-none d-lg-block"></span>
+          <!-- 輸入關鍵字搜尋 -->
+          <input
+            class="form-control"
+            type="search"
+            placeholder="搜尋數百萬創意資源"
+            aria-label="Search"
+          />
+          <!-- 圖搜圖的圖示 -->
+          <button
+            class="search-bar-btn btn-image-search"
+            type="button"
+          ></button>
+        </div>
+      </form>
+      <!-- login-bar -->
+      <ul class="list-unstyled mb-2 mb-lg-0 d-flex gap-2">
+        <li class="nav-item">
+          <a
+            class="nav-s-btn icon-primary-fill fs-sm fw-medium"
+            href="#"
+            role="button"
+            >登入</a
+          >
         </li>
-        <li>
-          <a href="feedback.html" class="nav-link">回饋意見</a>
+        <li class="nav-item">
+          <a
+            class="nav-s-btn icon-secondary-outline fs-sm fw-medium"
+            href="#"
+            role="button"
+            >註冊</a
+          >
         </li>
-        <li>
-          <a href="info.html" class="nav-link">營業資訊</a>
+        <li class="nav-item">
+          <button class="icon-S icon-secondary-outline" type="button">
+            <svg
+              class="icon-cart-outline"
+              width="22px"
+              height="22px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.0978 2.00462L3.19965 2.01926L5.52668 2.48314C6.02844 2.58321 6.41577 2.9761 6.51194 3.47048L6.52663 3.57106L6.90957 6.99987H20.7454C21.5416 6.99987 22.1366 7.73076 21.9725 8.50772L20.0725 17.508C19.9502 18.0861 19.438 18.5002 18.8454 18.5002H7.23962C6.59841 18.4999 6.06113 18.0169 5.99384 17.381L5.01446 8.10927L4.59332 4.33573L2.80594 3.98026L2.70702 3.95486C2.22112 3.80589 1.9178 3.3112 2.01949 2.80347C2.1214 2.29589 2.59194 1.95601 3.0978 2.00462ZM7.91736 16.5001H18.2352L19.8189 8.99992H7.12504L7.91736 16.5001Z"
+                fill="currentColor"
+              />
+              <path
+                d="M9.02021 20.5C9.02021 21.3284 8.3467 22 7.51588 22C6.68506 22 6.01154 21.3284 6.01154 20.5C6.01154 19.6715 6.68506 18.9999 7.51588 18.9999C8.3467 18.9999 9.02021 19.6715 9.02021 20.5Z"
+                fill="currentColor"
+              />
+              <path
+                d="M20.052 20.5C20.052 21.3284 19.3785 22 18.5477 22C17.7168 22 17.0433 21.3284 17.0433 20.5C17.0433 19.6715 17.7168 18.9999 18.5477 18.9999C19.3785 18.9999 20.052 19.6715 20.052 20.5Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
         </li>
       </ul>
-    </li>
-
-    <li class="nav-item">
-      <a href="about.html" class="nav-link">About</a>
-    </li>
-    <li class="nav-item">
-      <a href="blog.html" class="nav-link">Blog</a>
-    </li>
-  </ul>
+    </div>
+  </nav>
+  <!-- 分類nav-bar -->
+  <div class="container navbar navbar-expand-lg navbar-white bg-white fs-md">
+    <!-- mobile search-bar -->
+    <form class="d-lg-none d-flex mx-auto">
+      <div class="input-group btn-select">
+        <!-- 下拉式搜尋 -->
+        <button
+          class="search-bar-btn dropdown-toggle d-flex align-items-center d-none d-lg-block"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          全部
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">全部</a></li>
+          <li><a class="dropdown-item" href="#">圖片</a></li>
+          <li><a class="dropdown-item" href="#">影片</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">其他</a></li>
+        </ul>
+        <span class="divider d-none d-lg-block"></span>
+        <!-- 輸入關鍵字搜尋 -->
+        <input
+          class="form-control"
+          type="search"
+          placeholder="搜尋數百萬創意資源"
+          aria-label="Search"
+        />
+        <!-- 圖搜圖的圖示 -->
+        <button class="search-bar-btn btn-image-search" type="button"></button>
+      </div>
+    </form>
+    <!-- 分類區 -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse d-lg-flex justify-content-lg-center"
+      id="navbarSupportedContent"
+    >
+      <ul
+        class="sub-nav list-unstyled mb-0 d-flex justify-content-center align-items-center"
+      >
+        <li class="nav-item nav-item-dropdown position-relative">
+          <a href="#" class="nav-link sub-nav-btn">字型</a>
+          <ul class="dropdown-menu-hover">
+            <li>
+              <a href="#" class="nav-link sub-nav-btn">預約訂位</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link sub-nav-btn">回饋意見</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link sub-nav-btn">營業資訊</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">範本</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">相片</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">主題</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">圖形</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">影片</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">音效</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">插畫</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">圖標</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">模板</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">筆刷</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sub-nav-btn">3D</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>

@@ -6,7 +6,7 @@
     border-radius: 16px;
     border: none;
     cursor: pointer;
-    background-color: $white;
+    background-color: transparent;
 }
 
 .btn-sm {
@@ -16,7 +16,7 @@
     border-radius: 16px;
     border: none;
     cursor: pointer;
-    background-color: $white;
+    background-color: transparent;
 }
 
 // 顏色與款式
@@ -132,11 +132,6 @@
 }
 
 // 客製
-.btn-x-auto {
-    padding-right: auto;
-    padding-left: auto;
-}
-
-.btn-fw-700 {
-    font-weight: 700;
+.btn-fw-500 {
+    font-weight: 500;
 }
