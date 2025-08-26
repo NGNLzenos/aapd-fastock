@@ -77,7 +77,7 @@
 
                     <!-- 試用鈕 - 互動樣式展開內容 -->
                     <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered ">
+                      <div class="modal-dialog modal-dialog-centered  modal-dialog-try">
                         <div class="modal-content">
                           <div class="modal-header border-0 pb-0">
                             <h5 class="modal-title fs-6" id="exampleModalLabel">素材試用</h5>
@@ -266,7 +266,71 @@
                     <p>$100</p>
                   </div>
                   <div>
-                    <a href="#" class="btn btn-pr text-white w-100">結帳</a>
+                    <!-- <a href="#" class="btn btn-pr text-white w-100">結帳</a> -->
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-pr text-white w-100" data-bs-toggle="modal" data-bs-target="#checkoutBtn">
+                      結帳
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="checkoutBtn" tabindex="-1" aria-labelledby="checkoutBtnLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-right modal-dialog-cart">
+                        <div class="modal-content">
+                          <div class="modal-body p-0 rounded-5 overflow-hidden">
+                            <div class="d-flex">
+
+                              <div class="exp-list-w bg-primary-50">
+                                <div class="p-4">
+                                  <div class="h-195px position-relative">
+                                    <img src="/assets/images/Homepage/card 1.png" class="h-100 rounded-5" alt="">
+                                    <div class="tag-s tag-yellow"></div>
+                                  </div>
+                                  <div class="p-2">
+                                    <h4 class="fs-lg">貓咪家庭</h4>
+                                    <div class=" d-flex justify-content-between">
+                                      <p class="">相片</p>
+                                      <p class="fw-bold text-notice"><del class="fs-sm text-neutral-600 fw-normal">120</del> $100</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="exp-cardinfo-w py-4 px-7">
+                                <div>
+                                  <div class="d-flex py-4 justify-content-between mb-4">
+                                    <h4 class="fs-lg">訪客快速結帳</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+
+                                  <div>
+                                    <div class="form-floating mb-4">
+                                      <input type="email" class="form-control rounded-6" id="floatingInput" placeholder="">
+                                      <label for="floatingInput">請輸入Email</label>
+                                      <div class="invalid-feedback">
+                                        必填
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <div class="card rounded-6 overflow-hidden" >
+                                        <ul class="list-group list-group-flush">
+                                          <li class="list-group-item">
+                                            
+                                          </li>
+                                          <li class="list-group-item">A second item</li>
+                                          <li class="list-group-item">A third item</li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

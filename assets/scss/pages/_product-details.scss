@@ -13,8 +13,12 @@
     .btn-close {
         --bs-btn-close-opacity: 1;
     }
-    .modal-dialog {
+    .modal-dialog-try {
         max-width: 936px;   
+        width: 90%;         
+    }
+    .modal-dialog-cart {
+        max-width: 680px;   
         width: 90%;         
     }
     .w-85{
@@ -23,10 +27,18 @@
     .w-15{
         width: 12.5%;
     }
+    .h-195px{
+        height: 195px;
+    }
     .list-style-none{
         list-style: none;
         padding-left: 0;
         margin-bottom: 0;
+    }
+    .modal-dialog-right {
+        margin-right: 15%;
+        margin-left: auto;
+        margin-top: 10%;
     }
 }
 
@@ -46,6 +58,18 @@
     .product-actions{
         &-w{
             width: 424px;
+        }
+    }
+    .product-details-pages{
+        .exp-list{
+            &-w{
+                width: 250px;
+            }
+        }
+        .exp-cardinfo{
+            &-w{
+                width: 430px;
+            }
         }
     }
 }
