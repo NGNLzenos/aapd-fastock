@@ -40,6 +40,11 @@
         margin-left: auto;
         margin-top: 10%;
     }
+    #floatingInput:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }
 }
 
 
