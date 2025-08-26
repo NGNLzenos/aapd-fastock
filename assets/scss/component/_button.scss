@@ -1,16 +1,23 @@
 // icon padding+bdrs
 .icon-M {
   @include icon-size;
+  box-sizing: border-box;
 }
 .icon-S {
-  @include icon-size(8px, 12px);
+  @include icon-size(
+    $py-sz: 8px,
+    $px-sz: 8px,
+    $bdrs-sz: 12px,
+    $w-sz: 40px,
+    $h-sz: 40px
+  );
 }
 
 // primary icon button ---
 // filled --
 .icon-primary-fill {
   @include icon-color;
-  @include icon-base;
+  @include icon-base($bd-base: 1px solid $primary);
   @include overlay-style;
   &:focus {
     @include icon-border($primary-800);
@@ -37,7 +44,7 @@
 // nonline --
 .icon-primary-nonline {
   @include icon-color($primary, $white);
-  @include icon-base;
+  @include icon-base($bd-base: 1px solid $white);
   &:hover {
     @include icon-hover-style;
   }
@@ -53,7 +60,7 @@
 // filled --
 .icon-secondary-fill {
   @include icon-color($i-bg-color: $secondary);
-  @include icon-base;
+  @include icon-base($bd-base: 1px solid $secondary);
   @include overlay-style(rgba(255, 255, 255, 0.2));
   &:focus {
     @include icon-border($secondary-900);
@@ -80,7 +87,7 @@
 // nonline --
 .icon-secondary-nonline {
   @include icon-color($secondary, $white);
-  border: none;
+  @include icon-base($bd-base: 1px solid $white);
   &:hover {
     @include icon-hover-style($secondary-100);
   }
