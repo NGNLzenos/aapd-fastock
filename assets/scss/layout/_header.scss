@@ -12,11 +12,11 @@ img {
   // outline: 1px solid red;
 }
 
-.dropdown-toggle::after {
+header .dropdown-toggle::after {
   display: none;
 }
 
-.nav-link {
+header .nav-link {
   display: inline-block;
   color: #000;
   text-decoration: none;
@@ -24,7 +24,7 @@ img {
   padding: 8px 16px;
 }
 
-.nav-s-btn {
+header .nav-s-btn {
   @include icon-size(
     $py-sz: 8px,
     $px-sz: 12px,
@@ -34,11 +34,11 @@ img {
   );
 }
 
-.nav-link:hover {
+header .nav-link:hover {
   opacity: 0.8;
 }
 
-.nav-item-dropdown {
+header .nav-item-dropdown {
   position: relative;
 
   // 大於用法https://pjchender.blogspot.com/2015/07/css.html
@@ -48,7 +48,7 @@ img {
   }
 }
 
-.dropdown-menu-hover {
+header .dropdown-menu-hover {
   width: 100%;
   display: none;
   position: absolute;
@@ -65,7 +65,7 @@ img {
 }
 
 // 搜尋框按鈕 (取代原本的 .btn)
-.search-bar-btn {
+header .search-bar-btn {
   display: inline-block;
   color: $neutral;
   text-align: center;
@@ -82,7 +82,7 @@ img {
 }
 
 // 搜尋框整體
-.input-group {
+header .input-group {
   max-width: 440px;
   width: 440px;
   position: relative;
@@ -119,7 +119,7 @@ img {
 }
 
 // 下拉選單
-.dropdown-toggle {
+header .dropdown-toggle {
   &::after {
     display: none;
   }
@@ -131,7 +131,7 @@ img {
 }
 
 // 搜尋框輸入時
-.form-control {
+header .form-control {
   padding-left: 40px;
   background-image: url("data:image/svg+xml,%3Csvg class='icon-search' width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5 2.5C15.1944 2.5 19 6.30558 19 11C19 12.9868 18.316 14.8125 17.1738 16.2598L21.707 20.793L21.7754 20.8691C22.0957 21.2619 22.0731 21.8409 21.707 22.207C21.3409 22.5731 20.7619 22.5957 20.3691 22.2754L20.293 22.207L15.7598 17.6738C14.3125 18.816 12.4868 19.5 10.5 19.5C5.80558 19.5 2 15.6944 2 11C2 6.30558 5.80558 2.5 10.5 2.5ZM10.5 4.5C6.91015 4.5 4 7.41015 4 11C4 14.5899 6.91015 17.5 10.5 17.5C14.0899 17.5 17 14.5899 17 11C17 7.41015 14.0899 4.5 10.5 4.5Z' fill='var(--ui6-sys-color-neutral-on-surface-def, %23262626)' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -141,7 +141,7 @@ img {
 }
 
 // 分隔線
-.divider {
+header .divider {
   position: absolute;
   left: 75px;
   height: 100%;
@@ -166,7 +166,7 @@ img {
     padding: 6px 16px;
   }
   .sub-nav-btn {
-    @include icon-size($px-sz: 24px, $w-sz: 81px);
+    @include icon-size($px-sz: 24px, $w-sz: 82px);
     @include icon-color($i-color: $black, $i-bg-color: $white);
     &:hover {
       @include icon-hover-style($secondary-100);
