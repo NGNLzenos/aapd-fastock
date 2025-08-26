@@ -318,7 +318,7 @@
                                         <ul class="list-group list-group-flush">
                                           <li class="list-group-item p-0 d-flex justify-content-between align-items-center">
                                             <div class="form-floating w-100">
-                                              <input type="text" class="form-control border-0 " id="checkput-credit-card" placeholder="" required>
+                                              <input type="text" class="form-control border-0 " id="checkput-credit-name" placeholder="" required>
                                               <label for="checkput-credit-name">信用卡持有者</label>
                                             </div>
                                             <div class="invalid-feedback">
@@ -328,8 +328,8 @@
 
                                           <li class="list-group-item p-0 d-flex justify-content-between align-items-center">
                                             <div class="form-floating w-100">
-                                              <input type="text" class="form-control border-0 " id="checkput-credit-card" placeholder="" required>
-                                              <label for="checkput-credit-card">xxxx-xxxx-xxxx-xxxx</label>
+                                              <input type="text" class="form-control border-0 " id="checkput-credit-number" placeholder="" required>
+                                              <label for="checkput-credit-number">xxxx-xxxx-xxxx-xxxx</label>
                                               <div class="invalid-feedback">
                                                 必填
                                               </div>
@@ -347,7 +347,7 @@
                                               </div>
                                             </div>
                                             <div class="form-floating w-100">
-                                              <input type="text" class="form-control border-0 " id="checkput-credit-three" placeholder="">
+                                              <input type="text" class="form-control border-0 " id="checkput-credit-three" placeholder="" required>
                                               <label for="checkput-credit-three">CVC</label>
                                               <div class="invalid-feedback">
                                                 必填
@@ -360,14 +360,20 @@
 
                                     <div class="py-4">
                                       <p class="fw-bold text-center mb-3">共計 1 項產品｜付款總金額:$100元</p>
-                                      <div class="form-check">
+                                      <div class="form-check mb-1">
                                         <input class="form-check-input " type="checkbox" value="" id="invalidCheck" required>
-                                        <label class="form-check-label align-middle ms-1" for="invalidCheck">
+                                        <label class="form-check-label align-middle ms-1 fs-12px" for="invalidCheck">
                                           我同意 <a href="#" class="text-decoration-underline">服務條款</a>和 <a href="#" class="text-decoration-underline">隱私權政策</a>。 *
                                         </label>
                                         <div class="invalid-feedback">
                                           必須勾選同意條款
                                         </div>
+                                      </div>
+                                      <div class="form-check mb-3">
+                                        <input class="form-check-input " type="checkbox" value="" id="invalidCheck">
+                                        <label class="form-check-label align-middle ms-1 fs-12px" for="invalidCheck">
+                                          我希望接收電子郵件公告和優惠，(可以隨時取消訂閱)。
+                                        </label>
                                       </div>
                                       <button class="btn btn-pr w-100" type="submit">結帳</button>
                                     </div>
@@ -433,7 +439,6 @@
                               data-bs-toggle="tooltip"
                               data-bs-placement="top"
                               title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto ipsam repudiandae. ">
-                              
                           </p>
                         </li>
                       </ul>
@@ -475,6 +480,7 @@
       });
 
 
+      // info顯示
       document.addEventListener("DOMContentLoaded", () => {
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el))
@@ -488,17 +494,42 @@
 
         Array.from(forms).forEach(form => {
           form.addEventListener('submit', event => {
-            // 阻止提交，如果表單無效
+            
             if (!form.checkValidity()) {
               event.preventDefault()
               event.stopPropagation()
             }
 
-            // 加上 Bootstrap 樣式
+            
             form.classList.add('was-validated')
           }, false)
         })
       })();
+
+      // 結帳跳轉到下一頁
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".needs-validation");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); 
+
+          if (!form.checkValidity()) {
+            form.classList.add("was-validated");
+            return;
+          }
+
+          // 取得輸入資料
+          const email = document.getElementById("checkput-mail").value.trim();
+          const cardNumber = document.getElementById("checkput-credit-number").value.trim();
+
+          // 存到 localStorage
+          localStorage.setItem("checkout_email", email);
+          localStorage.setItem("checkout_card", cardNumber);
+
+          // 確認跳轉
+          window.location.href = "checkout.html"; // ← 確認 checkout.html 路徑是否正確
+        });
+      });
 
 
     </script>

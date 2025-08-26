@@ -40,11 +40,24 @@
         margin-left: auto;
         margin-top: 10%;
     }
+    .fs-12px{
+        font-size: 12px;
+    }
     #floatingInput:focus {
         outline: none;
         box-shadow: none;
         border: none;
     }
+    .invalid-feedback{
+        margin-left: 15px;
+        padding-bottom: 10px;
+    }
+    .btn:hover{
+        color: $white;
+        
+    }
+    
+
 }
 
 
