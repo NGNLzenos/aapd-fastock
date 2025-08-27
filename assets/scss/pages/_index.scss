@@ -1,3 +1,81 @@
-.index-title {
-  font-size: 100px;
+.hero {
+  width: 100%;
+  height: 280px;
+  background-color: $secondary-100;
+  background-image: url(/assets/images/Homepage/section-hero.svg);
+  background-size: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.color-block {
+  background-color: $accent;
+}
+.ps-148 {
+  padding-left: 10%;
+}
+// 膠囊選單設定
+.category .nav-pills {
+  width: 340px;
+  border-radius: 20px;
+  background-color: $secondary-100;
+  .nav-link {
+    color: #000;
+    background-color: transparent;
+    padding: 8px 32px;
+    border-radius: 12px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    &:focus,
+    &:active,
+    &.active {
+      color: $white;
+      background-color: #000;
+    }
+  }
+}
+// 查看更多 按鈕的大小
+.text-btn {
+  width: 113px;
+}
+
+// 卡片區設定
+.feature-card-img {
+  max-width: 305px;
+  width: 100%;
+  height: 302px;
+}
+
+.card .inCardBtnGroup {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+.card:hover .inCardBtnGroup {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+// CTA
+.CTA {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url(/assets/images/Homepage/section-2.png);
+  background-color: $secondary-100;
+  background-size: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  .card-text {
+    width: 428px;
+    padding-left: 150px;
+  }
+}
+
+.join-btn {
+  width: 200px;
+  border-radius: 16px;
+  padding: 12px 24px;
 }
