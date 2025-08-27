@@ -1,0 +1,25 @@
+.checkout-pages{
+    .w-728px{
+        width: 728px;
+    }
+    .w-512px{
+        width: 512px;
+    }
+    .w-220px{
+        width: 220px;
+    }
+    .w-28px{
+        width: 28px;
+    }
+    .back-btn{
+        margin-left: -40px;
+    }
+    ul{
+        list-style: none;
+        padding-left: 0;
+    }
+    .btn:hover{
+        color: $white;
+        
+    }
+}
