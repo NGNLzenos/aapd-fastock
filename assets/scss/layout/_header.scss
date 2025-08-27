@@ -11,60 +11,7 @@ img {
   box-sizing: border-box;
   // outline: 1px solid red;
 }
-
-header .dropdown-toggle::after {
-  display: none;
-}
-
-header .nav-link {
-  display: inline-block;
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 8px 16px;
-}
-
-header .nav-s-btn {
-  @include icon-size(
-    $py-sz: 8px,
-    $px-sz: 12px,
-    $bdrs-sz: 12px,
-    $w-sz: 61px,
-    $h-sz: 40px
-  );
-}
-
-header .nav-link:hover {
-  opacity: 0.8;
-}
-
-header .nav-item-dropdown {
-  position: relative;
-
-  // 大於用法https://pjchender.blogspot.com/2015/07/css.html
-  // 指定子元素
-  &:hover > .dropdown-menu-hover {
-    display: block;
-  }
-}
-
-header .dropdown-menu-hover {
-  width: 100%;
-  display: none;
-  position: absolute;
-  text-align: center;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #f5f5f5;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  list-style: none;
-  padding: 8px 0;
-  margin: 0;
-}
-
-// 搜尋框按鈕 (取代原本的 .btn)
+// 先調整 搜尋框按鈕 (取代原本的 .btn)
 header .search-bar-btn {
   display: inline-block;
   color: $neutral;
@@ -80,45 +27,12 @@ header .search-bar-btn {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
-// 搜尋框整體
-header .input-group {
-  max-width: 440px;
-  width: 440px;
-  position: relative;
-  border: 1px solid $neutral-300;
-  border-radius: 16px;
-  transition: all 0.2s ease-in-out;
-  box-shadow: none;
-
-  // 移除預設的子元素邊框，讓父容器統一控制
-  > .form-control,
-  > .search-bar-btn {
-    border: none !important;
-    box-shadow: none !important;
-    background-color: transparent !important;
-  }
-
-  &:hover {
-    border-color: $neutral-500;
-    .divider {
-      background-color: $neutral-500;
-    }
-  }
-
-  // 用within統一focus效果
-  // 參考https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-within
-  &:focus-within {
-    border-color: $neutral-500;
-    border-width: 2px;
-    box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
-    .divider {
-      background-color: $neutral-500;
-    }
-  }
+// 下拉選單 先隱藏預設偽元素
+header .dropdown-toggle::after {
+  display: none;
 }
 
-// 下拉選單
+// 下拉選單 再加設計稿的icon
 header .dropdown-toggle {
   &::after {
     display: none;
@@ -161,11 +75,131 @@ header .divider {
   background-size: 24px 24px;
 }
 
-.sub-nav {
-  ul {
-    padding: 6px 16px;
+// 最後再排版 搜尋框整體
+header .input-group {
+  width: 440px;
+  position: relative;
+  border: 1px solid $neutral-300;
+  border-radius: 16px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: none;
+  @media (max-width: 992px) {
+    width: 365px;
   }
+  @media (max-width: 768px) {
+    width: 295px;
+  }
+
+  // 移除預設的子元素邊框，讓父容器統一控制
+  > .form-control,
+  > .search-bar-btn {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+
+  &:hover {
+    border-color: $neutral-500;
+    .divider {
+      background-color: $neutral-500;
+    }
+  }
+
+  // 用within統一focus效果
+  // 參考https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-within
+  &:focus-within {
+    border-color: $neutral-500;
+    border-width: 2px;
+    box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
+    .divider {
+      background-color: $neutral-500;
+    }
+  }
+}
+
+// login btn
+header .nav-login-btn {
+  @include icon-size(
+    $py-sz: 8px,
+    $px-sz: 12px,
+    $bdrs-sz: 12px,
+    $w-sz: 61px,
+    $h-sz: 40px
+  );
+}
+
+// 分類下拉選單--------------
+header .nav-link {
+  display: inline-block;
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+header .nav-link:hover {
+  opacity: 0.8;
+}
+
+header .nav-item-dropdown {
+  position: relative;
+
+  // 大於用法https://pjchender.blogspot.com/2015/07/css.html
+  // 指定子元素
+  &:hover > .dropdown-menu-hover {
+    display: block;
+  }
+}
+
+header .dropdown-menu-hover {
+  width: 100%;
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+// pc版分類下拉選單
+header .nav-item-dropdown:hover .dropdown-menu-hover {
+  display: flex;
+}
+
+.sc-list-left {
+  flex-basis: 25%;
+}
+
+.sc-list-right {
+  flex-basis: 75%;
+}
+
+// 手機板分類icon
+header .navbar-toggler {
+  border: none;
+  padding: 8px;
+  border-radius: 12px;
+  &:hover,
+  &:active {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+// 手機板offcanvas滿版
+.offcanvas-full {
+  width: 100vw !important;
+}
+
+.sub-nav {
   .sub-nav-btn {
+    display: flex;
+    align-items: center;
     @include icon-size($px-sz: 24px, $w-sz: 82px);
     @include icon-color($i-color: $black, $i-bg-color: $white);
     &:hover {
@@ -174,7 +208,19 @@ header .divider {
     &:focus {
       @include icon-border($secondary-900);
     }
-    @media (max-width: 992px) {
+    @media (max-width: 1080px) {
+      @include icon-size($px-sz: 12px, $w-sz: 70px);
+    }
+  }
+}
+
+// offcanvas 點選效果先留著做檢查用 待刪
+.offcanvas-nav {
+  ul li a {
+    border-radius: 4px;
+    &:active,
+    &:focus {
+      box-shadow: 0 2px 4px 0 rgba($primary-200, 0.8);
     }
   }
 }
