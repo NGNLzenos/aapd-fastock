@@ -9,7 +9,7 @@ img {
 *:before,
 *:after {
   box-sizing: border-box;
-  // outline: 1px solid red;
+   outline: 1px solid red;
 }
 // 先調整 搜尋框按鈕 (取代原本的 .btn)
 header .search-bar-btn {
@@ -128,6 +128,7 @@ header .nav-login-btn {
   );
 }
 
+
 // 分類下拉選單--------------
 header .nav-link {
   display: inline-block;
@@ -142,42 +143,102 @@ header .nav-link:hover {
 }
 
 header .nav-item-dropdown {
-  position: relative;
-
   // 大於用法https://pjchender.blogspot.com/2015/07/css.html
   // 指定子元素
   &:hover > .dropdown-menu-hover {
-    display: block;
+    display: flex;
   }
 }
 
-header .dropdown-menu-hover {
+header .dropdown-menu {
   width: 100%;
   display: none;
   position: absolute;
   text-align: center;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0%;
   background: #f5f5f5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  z-index: 500;
   list-style: none;
-  padding: 8px 0;
   margin: 0;
 }
 
 // pc版分類下拉選單
-header .nav-item-dropdown:hover .dropdown-menu-hover {
-  display: flex;
+// header .nav-item-dropdown:hover .dropdown-menu-hover {
+//   display: flex;
+// }
+
+.sub-nav .dropdown{
+  section.dropdown-menu{
+    display: none;
+}
+  &:hover > .dropdown-menu{
+    display: block;
+  }
 }
 
-.sc-list-left {
+.list-left {
   flex-basis: 25%;
+  border: 1px solid red;
+  padding: 16px 40px;
+}
+.list-left-pills-btn{
+  color:$black;
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: none;
+  &:hover{
+    background-color: rgba($black, 0.05);
+  }
+  &:active, &:focus{
+    border: 1px solid $secondary-900;
+  }
+  &.active{
+    color: #fff;
+    background-color: #000;
+    box-shadow: none;
+  }
+}
+.pills-img{
+  width: calc(50% - 4px);
+  height: 135px;
+  border-radius: 12px;
+  overflow: hidden;
+  vertical-align: middle;
+  object-fit: cover;
 }
 
-.sc-list-right {
+.list-right {
   flex-basis: 75%;
+  border: 1px solid green;
+  padding: 16px 40px;
+  .list-group{
+    width: 260px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px;
+    .list-group-item{
+      width: 100%;
+      display: inline-block;
+      padding: 4px 8px;
+      color: $neutral;
+      border: none;
+      border-radius: 4px;
+      text-align: left;
+      background-color: transparent;
+      &:hover {
+        background-color: $neutral-100;
+      }
+      &:disabled {
+        color: $secondary-700;
+        background-color: transparent;
+      }
+    }
+  }
 }
 
 // 手機板分類icon

@@ -7,7 +7,7 @@
       class="container-fluid d-flex justify-content-between align-items-center"
     >
       <!-- 首頁logo -->
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" href="index.html"
         ><img
           class="d-none d-lg-block"
           src="/assets/images/logo-desktop.svg"
@@ -54,7 +54,7 @@
         </div>
       </form>
       <!-- login-bar -->
-      <ul class="list-unstyled mb-2 mb-lg-0 d-flex gap-2">
+      <ul class="list-unstyled mb-0 d-flex align-items-center gap-2">
         <li class="nav-item">
           <a
             class="nav-login-btn icon-primary-fill fs-sm fw-medium"
@@ -73,9 +73,7 @@
         </li>
         <li class="nav-item">
           <button class="icon-S icon-secondary-outline" type="button">
-            <svg width="22px" height="22px">
-              <use href="#icon-cart-outline"></use>
-            </svg>
+            <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart">
           </button>
         </li>
       </ul>
@@ -144,7 +142,7 @@
         <li class="nav-item nav-item-dropdown" style="position: initial">
           <a
             href="#"
-            class="nav-link sub-nav-btn"
+            class="nav-link dropdown sub-nav-btn"
             role="button"
             id="dropdownCateMenu"
             data-bs-toggle="dropdown"
@@ -152,14 +150,141 @@
             >字型</a
           >
           <section
-            class="dropdown-menu"
+            class="dropdown-menu "
             style="width: 100%"
             aria-labelledby="dropdownCateMenu"
           >
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </section>
+          <div class="d-flex">
+            <div class="dropdown-item list-left bg-neutral-100">
+              <ul class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="list-left-pills-btn active " id="sub-pills-popular-tab" data-bs-toggle="pill" data-bs-target="#sub-pills-popular" type="button" role="tab" aria-controls="sub-pills-popular" aria-selected="true">人氣</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="list-left-pills-btn" id="sub-pills-sale-tab" data-bs-toggle="pill" data-bs-target="#sub-pills-sale" type="button" role="tab" aria-controls="sub-pills-sale" aria-selected="false">促銷</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="list-left-pills-btn" id="sub-pills-free-tab" data-bs-toggle="pill" data-bs-target="#sub-pills-free" type="button" role="tab" aria-controls="sub-pills-free" aria-selected="false">每週免費</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="sub-pills-popular" role="tabpanel" aria-labelledby="sub-pills-popular-tab">
+                  <div class="d-flex gap-2 flex-wrap">
+                    <img class="pills-img" src="/assets/images/Homepage/card 1.png" alt="card 1.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 2.png" alt="card 2.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 3.png" alt="card 3.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 4.png" alt="card 4.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 5.png" alt="card 5.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 6.png" alt="card 6.png">
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="sub-pills-sale" role="tabpanel" aria-labelledby="sub-pills-sale-tab"><div class="d-flex gap-2 flex-wrap">
+                    <img class="pills-img" src="/assets/images/Homepage/card 7.png" alt="card 7.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 8.png" alt="card 8.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 9.png" alt="card 9.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 10.png" alt="card 10.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 11.png" alt="card 11.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 12.png" alt="card 12.png">
+                  </div></div>
+                <div class="tab-pane fade" id="sub-pills-free" role="tabpanel" aria-labelledby="sub-pills-free-tab">
+                  <div class="d-flex gap-2 flex-wrap">
+                    <img class="pills-img" src="/assets/images/Homepage/card 13.png" alt="card 13.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 14.png" alt="card 14.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 1.png" alt="card 1.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 2.png" alt="card 2.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 3.png" alt="card 3.png">
+                    <img class="pills-img" src="/assets/images/Homepage/card 4.png" alt="card 4.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-item list-right">
+              <ul class="list-unstyled dropdown-item d-flex">
+                <li
+                class="pb-0 mb-0 pe-4 me-4 border-right border-secondary-400 border-3"
+              >
+                  <ul class="list-unstyled list-group d-flex flex-column gap-3">
+                  <li>
+                    <h3
+                      class="fs-lg fw-bold list-group-item"
+                    >相片類型</h3>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >動物
+                      </a>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >風景
+                      </a>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >產品
+                      </a>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >3D
+                      </a>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >簽名
+                      </a>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >文字
+                      </a>
+                  </li>
+                  </ul>
+                </li>
+                <li
+                class="pb-0 mb-0 pe-4 me-4 border-right border-secondary-400 border-3"
+              >
+                <ul class="list-unstyled list-group d-flex flex-column gap-3">
+                  <li><h3 class="fs-lg fw-bold list-group-item">風格</h3></li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >現代</a>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >復古</a>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >華麗</a>
+                  </li>
+                </ul>
+                </li>
+                <li class="pb-0 mb-0">
+                  <ul class="list-unstyled list-group d-flex flex-column gap-3">
+                  <li><h3 class="fs-lg fw-bold list-group-item">用途</h3></li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >海報</a>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >影音</a>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >傳單</a>
+                  </li>
+                  <li>
+                    <a class="list-group-item" href="#"
+                      >社群貼文</a>
+                  </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link sub-nav-btn">範本</a>
