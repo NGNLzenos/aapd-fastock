@@ -207,20 +207,46 @@ header .navbar-toggler {
     }
     &:focus {
       @include icon-border($secondary-900);
+      box-shadow: none;
     }
-    @media (max-width: 1080px) {
+    @media (max-width: 1140px) {
       @include icon-size($px-sz: 12px, $w-sz: 70px);
     }
   }
 }
 
 // offcanvas 點選效果先留著做檢查用 待刪
-.offcanvas-nav {
-  ul li a {
-    border-radius: 4px;
-    &:active,
-    &:focus {
-      box-shadow: 0 2px 4px 0 rgba($primary-200, 0.8);
-    }
+// .offcanvas-nav {
+//   ul li a {
+//     border-radius: 4px;
+//     &:active,
+//     &:focus {
+//       box-shadow: 0 2px 4px 0 rgba($primary-200, 0.8);
+//     }
+//   }
+// }
+
+// offcanvas mainmenu
+.offcanvas {
+  .btn-close {
+    box-sizing: border-box;
+    opacity: 1;
+    border: none;
+  }
+}
+.offcanvas li a {
+  cursor: pointer;
+}
+
+// offcanvas submenu
+.offcanvas-submenu {
+  .btn-close {
+    margin-left: 0;
+  }
+  .list-group-item {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
