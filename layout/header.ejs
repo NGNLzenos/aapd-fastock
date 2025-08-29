@@ -31,12 +31,16 @@
           >
             全部
           </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">全部</a></li>
-            <li><a class="dropdown-item" href="#">圖片</a></li>
-            <li><a class="dropdown-item" href="#">影片</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">其他</a></li>
+          <ul class="dropdown-menu text-start" style="width: 25%">
+            <li>
+              <a class="dropdown-item" href="#">人氣</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">促銷</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">每周免費</a>
+            </li>
           </ul>
           <span class="divider d-none d-lg-block"></span>
           <!-- 輸入關鍵字搜尋 -->
@@ -73,7 +77,7 @@
         </li>
         <li class="nav-item">
           <button class="icon-S icon-secondary-outline" type="button">
-            <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart">
+            <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
           </button>
         </li>
       </ul>
@@ -81,10 +85,10 @@
   </nav>
   <!-- 分類nav-bar -->
   <div
-    class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0"
+    class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 pb-0"
   >
     <!-- mobile search-bar -->
-    <form class="d-lg-none d-flex">
+    <form class="d-lg-none d-flex mb-6p">
       <div class="input-group">
         <!-- 下拉式搜尋 -->
         <button
@@ -96,11 +100,9 @@
           全部
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">全部</a></li>
-          <li><a class="dropdown-item" href="#">圖片</a></li>
-          <li><a class="dropdown-item" href="#">影片</a></li>
-          <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="#">其他</a></li>
+          <li><a class="dropdown-item" href="#">人氣</a></li>
+          <li><a class="dropdown-item" href="#">促銷</a></li>
+          <li><a class="dropdown-item" href="#">每周免費</a></li>
         </ul>
         <span class="divider d-none d-lg-block"></span>
         <!-- 輸入關鍵字搜尋 -->
@@ -142,182 +144,3110 @@
         <li class="nav-item nav-item-dropdown" style="position: initial">
           <a
             href="#"
-            class="nav-link dropdown sub-nav-btn"
+            class="nav-link dropdown sub-nav-btn mb-6p"
             role="button"
             id="dropdownCateMenu"
-            data-bs-toggle="dropdown"
             aria-expanded="false"
             >字型</a
           >
           <section
-            class="dropdown-menu "
+            class="dropdown-menu p-0"
             style="width: 100%"
             aria-labelledby="dropdownCateMenu"
           >
-          <div class="d-flex">
-            <div class="dropdown-item list-left bg-neutral-100">
-              <ul class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="list-left-pills-btn active " id="sub-pills-popular-tab" data-bs-toggle="pill" data-bs-target="#sub-pills-popular" type="button" role="tab" aria-controls="sub-pills-popular" aria-selected="true">人氣</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="list-left-pills-btn" id="sub-pills-sale-tab" data-bs-toggle="pill" data-bs-target="#sub-pills-sale" type="button" role="tab" aria-controls="sub-pills-sale" aria-selected="false">促銷</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="list-left-pills-btn" id="sub-pills-free-tab" data-bs-toggle="pill" data-bs-target="#sub-pills-free" type="button" role="tab" aria-controls="sub-pills-free" aria-selected="false">每週免費</button>
-                </li>
-              </ul>
-              <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="sub-pills-popular" role="tabpanel" aria-labelledby="sub-pills-popular-tab">
-                  <div class="d-flex gap-2 flex-wrap">
-                    <img class="pills-img" src="/assets/images/Homepage/card 1.png" alt="card 1.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 2.png" alt="card 2.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 3.png" alt="card 3.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 4.png" alt="card 4.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 5.png" alt="card 5.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 6.png" alt="card 6.png">
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div class="tab-pane fade" id="sub-pills-sale" role="tabpanel" aria-labelledby="sub-pills-sale-tab"><div class="d-flex gap-2 flex-wrap">
-                    <img class="pills-img" src="/assets/images/Homepage/card 7.png" alt="card 7.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 8.png" alt="card 8.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 9.png" alt="card 9.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 10.png" alt="card 10.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 11.png" alt="card 11.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 12.png" alt="card 12.png">
-                  </div></div>
-                <div class="tab-pane fade" id="sub-pills-free" role="tabpanel" aria-labelledby="sub-pills-free-tab">
-                  <div class="d-flex gap-2 flex-wrap">
-                    <img class="pills-img" src="/assets/images/Homepage/card 13.png" alt="card 13.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 14.png" alt="card 14.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 1.png" alt="card 1.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 2.png" alt="card 2.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 3.png" alt="card 3.png">
-                    <img class="pills-img" src="/assets/images/Homepage/card 4.png" alt="card 4.png">
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="dropdown-item list-right">
-              <ul class="list-unstyled dropdown-item d-flex">
-                <li
-                class="pb-0 mb-0 pe-4 me-4 border-right border-secondary-400 border-3"
-              >
-                  <ul class="list-unstyled list-group d-flex flex-column gap-3">
-                  <li>
-                    <h3
-                      class="fs-lg fw-bold list-group-item"
-                    >相片類型</h3>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">字型類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
                   </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >動物
-                      </a>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
                   </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >風景
-                      </a>
-                  </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >產品
-                      </a>
-                  </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >3D
-                      </a>
-                  </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >簽名
-                      </a>
-                  </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >文字
-                      </a>
-                  </li>
-                  </ul>
-                </li>
-                <li
-                class="pb-0 mb-0 pe-4 me-4 border-right border-secondary-400 border-3"
-              >
-                <ul class="list-unstyled list-group d-flex flex-column gap-3">
-                  <li><h3 class="fs-lg fw-bold list-group-item">風格</h3></li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >現代</a>
-                  </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >復古</a>
-                  </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >華麗</a>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
-                </li>
-                <li class="pb-0 mb-0">
-                  <ul class="list-unstyled list-group d-flex flex-column gap-3">
-                  <li><h3 class="fs-lg fw-bold list-group-item">用途</h3></li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >海報</a>
-                  </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >影音</a>
-                  </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >傳單</a>
-                  </li>
-                  <li>
-                    <a class="list-group-item" href="#"
-                      >社群貼文</a>
-                  </li>
-                  </ul>
-                </li>
-              </ul>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">範本</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >範本</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">範本類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">相片</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >相片</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">相片類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">主題</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >主題</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">主題類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">圖形</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >圖形</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">圖形類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">影片</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >影片</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">影片類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">音效</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >音效</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">音效類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">插畫</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >插畫</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">插畫類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">圖標</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >圖標</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">圖標類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">模板</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >模板</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">模板類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">筆刷</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >筆刷</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">筆刷類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link sub-nav-btn">3D</a>
+        <li class="nav-item nav-item-dropdown" style="position: initial">
+          <a
+            href="#"
+            class="nav-link dropdown sub-nav-btn mb-6p"
+            role="button"
+            id="dropdownCateMenu"
+            aria-expanded="false"
+            >3D</a
+          >
+          <section
+            class="dropdown-menu p-0"
+            style="width: 100%"
+            aria-labelledby="dropdownCateMenu"
+          >
+            <div class="d-flex">
+              <div class="list-left bg-neutral-100">
+                <ul
+                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn active"
+                      id="sub-pills-popular-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-popular"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-popular"
+                      aria-selected="true"
+                    >
+                      人氣
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-sale-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-sale"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-sale"
+                      aria-selected="false"
+                    >
+                      促銷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="list-left-pills-btn"
+                      id="sub-pills-free-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#sub-pills-free"
+                      type="button"
+                      role="tab"
+                      aria-controls="sub-pills-free"
+                      aria-selected="false"
+                    >
+                      每週免費
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="sub-pills-popular"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-popular-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 5.png"
+                        alt="card 5.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 6.png"
+                        alt="card 6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-sale"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-sale-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 7.png"
+                        alt="card 7.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 8.png"
+                        alt="card 8.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 9.png"
+                        alt="card 9.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 10.png"
+                        alt="card 10.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 11.png"
+                        alt="card 11.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 12.png"
+                        alt="card 12.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="sub-pills-free"
+                    role="tabpanel"
+                    aria-labelledby="sub-pills-free-tab"
+                  >
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 13.png"
+                        alt="card 13.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 14.png"
+                        alt="card 14.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 1.png"
+                        alt="card 1.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 2.png"
+                        alt="card 2.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 3.png"
+                        alt="card 3.png"
+                      />
+                      <img
+                        class="pills-img"
+                        src="/assets/images/Homepage/card 4.png"
+                        alt="card 4.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-right bg-white">
+                <ul class="list-unstyled d-flex align-items-center">
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">3D類型</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">動物 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">風景 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">產品 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">3D </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">簽名 </a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">文字 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">風格</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">現代</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">復古</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">華麗</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider-box"></li>
+                  <li class="pb-0 mb-0">
+                    <ul
+                      class="list-unstyled list-group d-flex flex-column gap-3"
+                    >
+                      <li>
+                        <h3 class="fs-5 fw-bold">用途</h3>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">海報</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">影音</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">傳單</a>
+                      </li>
+                      <li>
+                        <a class="list-group-item" href="#">社群貼文</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </li>
       </ul>
     </div>
@@ -548,7 +3478,7 @@
       aria-labelledby="sharedSubMenuLabel"
     >
       <div
-        class="offcanvas-header d-flex justify-content-between align-items-center"
+        class="offcanvas-header d-flex justify-content-between align-items-center shadow"
       >
         <button
           type="button"

@@ -9,7 +9,7 @@ img {
 *:before,
 *:after {
   box-sizing: border-box;
-   outline: 1px solid red;
+  // outline: 1px solid red;
 }
 // 先調整 搜尋框按鈕 (取代原本的 .btn)
 header .search-bar-btn {
@@ -116,6 +116,15 @@ header .input-group {
     }
   }
 }
+// input的全部dropdown
+header .input-group .dropdown {
+  .dropdown-menu .show {
+    width: 80px;
+  }
+}
+header ul.dropdown-menu.show {
+  display: inline-block;
+}
 
 // login btn
 header .nav-login-btn {
@@ -127,7 +136,6 @@ header .nav-login-btn {
     $h-sz: 40px
   );
 }
-
 
 // 分類下拉選單--------------
 header .nav-link {
@@ -165,65 +173,75 @@ header .dropdown-menu {
 }
 
 // pc版分類下拉選單
-// header .nav-item-dropdown:hover .dropdown-menu-hover {
-//   display: flex;
-// }
-
-.sub-nav .dropdown{
-  section.dropdown-menu{
-    display: none;
+// a連結+section的hover效果
+.sub-nav .dropdown {
+  &:hover ~ section.dropdown-menu {
+    display: block;
+  }
 }
-  &:hover > .dropdown-menu{
+section.dropdown-menu {
+  display: none;
+}
+
+.sub-nav .nav-item-dropdown {
+  section.dropdown-menu {
+    display: none;
+  }
+  &:hover section.dropdown-menu {
     display: block;
   }
 }
 
 .list-left {
   flex-basis: 25%;
-  border: 1px solid red;
+  // border: 1px solid red; 檢查用
   padding: 16px 40px;
 }
-.list-left-pills-btn{
-  color:$black;
+.list-left-pills-btn {
+  color: $black;
   background-color: #fff;
   padding: 8px 16px;
   border-radius: 12px;
   border: none;
-  &:hover{
+  &:hover {
     background-color: rgba($black, 0.05);
   }
-  &:active, &:focus{
+  &:active,
+  &:focus {
     border: 1px solid $secondary-900;
   }
-  &.active{
+  &.active {
     color: #fff;
     background-color: #000;
     box-shadow: none;
   }
 }
-.pills-img{
+.pills-img {
   width: calc(50% - 4px);
   height: 135px;
   border-radius: 12px;
   overflow: hidden;
   vertical-align: middle;
   object-fit: cover;
+  @media screen {
+  }
 }
 
 .list-right {
   flex-basis: 75%;
-  border: 1px solid green;
+  // border: 1px solid green; 檢查用
   padding: 16px 40px;
-  .list-group{
-    width: 260px;
+  .list-group {
+    width: auto;
     height: 500px;
     display: flex;
     flex-direction: column;
     align-items: start;
     padding: 8px;
-    .list-group-item{
-      width: 100%;
-      display: inline-block;
+    .list-group-item {
+      display: block;
+      max-width: 260px;
+      width: calc((75vw - 180px) / 3);
       padding: 4px 8px;
       color: $neutral;
       border: none;
@@ -239,6 +257,26 @@ header .dropdown-menu {
       }
     }
   }
+}
+.list-right {
+  .dropdown-item.active,
+  .dropdown-item:active {
+    color: black;
+    text-decoration: none;
+    background-color: none;
+  }
+}
+.list-divider {
+  // height: 80%;
+  border-right: 2px solid $secondary-400;
+  z-index: inherit;
+}
+.divider-box {
+  width: 2px;
+  height: 484px;
+  background-color: $secondary-400;
+  z-index: inherit;
+  margin: 0px 16px;
 }
 
 // 手機板分類icon

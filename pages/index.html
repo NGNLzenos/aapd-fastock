@@ -22,25 +22,30 @@
 
     <!-- hero section -->
     <section
-      class="hero container-fluid position-relative d-flex align-items-center ps-148"
+      class="hero container-fluid position-relative d-lg-flex justify-content-center justify-content-lg-start align-items-lg-center"
     >
-      <h2 class="fs-3 fw-bold">
-        靈感從這裡開始。<br />數百萬創意資源，
-        <!-- <span class="color-block p-2">隨選即用。</span> -->
-        <span class="color-block p-2"
-          ><a class="fs-5" href="./product-details.html"
-            >先點我去產品詳情頁</a
-          ></span
-        >
-        <span class="color-block p-2"
-          ><a class="fs-5" href="./product-list.html"
-            >先點我去產品列表頁</a
-          ></span
-        >
-        <span class="color-block p-2"
-          ><a class="fs-5" href="./checkout.html">先點我去結帳頁</a></span
-        >
-      </h2>
+      <div class="d-flex flex-column pt-7 pt-lg-0 d-inline-block">
+        <h2 class="fs-3 fw-bold mb-6p mb-lg-1">靈感從這裡開始。</h2>
+        <div class="d-flex flex-column flex-lg-row">
+          <h2 class="fs-3 fw-bold mb-6p mb-lg-1">數百萬創意資源，</h2>
+          <h2 class="fs-3 fw-bold">
+            <!-- <span class="color-block">隨選即用。</span> -->
+            <span class="color-block p-2"
+              ><a class="fs-5" href="./product-details.html"
+                >先點我去產品詳情頁</a
+              ></span
+            >
+            <span class="color-block p-2"
+              ><a class="fs-5" href="./product-list.html"
+                >先點我去產品列表頁</a
+              ></span
+            >
+            <span class="color-block p-2"
+              ><a class="fs-5" href="./checkout.html">先點我去結帳頁</a></span
+            >
+          </h2>
+        </div>
+      </div>
     </section>
 
     <!-- category main area -->
@@ -53,7 +58,7 @@
         >
           <li class="nav-item active" role="presentation">
             <button
-              class="nav-link active"
+              class="nav-link active fs-sm fw-medium letter-spacing-sm"
               id="pills-popular-tab"
               data-bs-toggle="pill"
               data-bs-target="#pills-popular"
@@ -67,7 +72,7 @@
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link"
+              class="nav-link fs-sm fw-medium letter-spacing-sm"
               id="pills-sale-tab"
               data-bs-toggle="pill"
               data-bs-target="#pills-sale"
@@ -81,7 +86,7 @@
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link"
+              class="nav-link fs-sm fw-medium letter-spacing-sm"
               id="pills-free-tab"
               data-bs-toggle="pill"
               data-bs-target="#pills-free"
@@ -90,7 +95,7 @@
               aria-controls="pills-free"
               aria-selected="false"
             >
-              免費
+              每周免費
             </button>
           </li>
         </ul>
@@ -698,6 +703,8 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+    <!-- dropdown section -->
+    <script></script>
     <!-- offcanvas submenu -->
     <script>
       // offcanvas submenu
