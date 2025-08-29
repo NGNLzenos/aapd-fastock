@@ -12,7 +12,7 @@
     <%- include('./layout/header'); -%>
     <%- include('./layout/sroll-top-btn.ejs'); -%>
     
-    <main class="product-details-pages pt-8 pb-12">
+    <main class="product-details-pages pt-lg-8 pt-3 pb-lg-12 pb-4">
 
       <!-- 產品細節主區塊 -->
       <section>
@@ -20,7 +20,7 @@
         <div class="container">
 
           <!-- 產品詳情-麵包屑 -->
-          <div class="mb-8">
+          <div class="mb-lg-8 mb-6">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html"><img src="/assets/images/icon/icon-home.svg" alt=""></a></li>
@@ -33,14 +33,14 @@
           <div class="row justify-content-between mb-8">
             <div class="col-lg-8 product-content-w mb-4">
               <!-- 照片區-標題列 -->
-              <div class="d-flex justify-content-between mb-3">
+              <div class="d-flex flex-column flex-lg-row  justify-content-between mb-lg-4 mb-6 gap-2">
                 <h3 class="fs-6 fw-bold d-flex align-items-center">貓咪家庭・
                   <div class="rounded-circle overflow-hidden d-inline-block me-2">
                     <img class="w-28px " src="/assets/images/產品詳細頁/avatar-Ryan.png" alt="">
                   </div>
                   <span class="fs-md">Ryan</span>
                 </h3>
-                <p class="fw-bold">下載次 <span class="me-1">20k</span><span class="tag-m bg-orange-100 rounded-3 m-0 fw-medium">人氣</span>
+                <p class="fw-bold">下載次 <span class="me-1">20k</span><span class="tag-m tag-s bg-orange-100 rounded-3 m-0 fw-medium">人氣</span>
                 </p>
               </div>
 
@@ -50,7 +50,7 @@
                 <div>
                   <!-- 試用按鈕 - 互動 -->
                   <div class="d-flex gap-3 position-absolute bottom-0 end-0 m-3">
-                    <button type="button" class="btn btn-sec-outline shadow " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-sm btn-sec-outline  shadow " data-bs-toggle="modal" data-bs-target="#exampleModal">
                       試用
                     </button>
                     <button type="button" class="btn btn-sec-outline shadow ">
@@ -210,7 +210,7 @@
                 <!-- 留言 -->
                 <div class="py-2 d-flex justify-content-between gap-3">
                   <div class="flex-grow-1 py-3 px-4 border border-neutral-300 rounded-5 ">
-                    <p>您需要<span class="text-primary-600 fw-bold"> 登入 </span>才能留言</p>
+                    <p>您需要<a href="#" class="text-primary-600 fw-bold"> 登入 </a>才能留言</p>
                   </div>
                   <div>
                     <button type="button" class="btn btn-neutral icon-secondary-fill" disabled>送出</button>
