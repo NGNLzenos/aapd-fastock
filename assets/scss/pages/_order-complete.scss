@@ -25,9 +25,12 @@
         bottom: 0;
         left: 0;
     }
-    .exp-register{
-        margin-right: -24px;
-        margin-left: -24px;
+    .btn.btn-pr:hover{
+        color: $white;
+    }
+    .btn.btn-pr:disabled {
+        background-color: $secondary-900;
+        color: $white;
     }
 
 }
