@@ -204,6 +204,16 @@
   }
 }
 
+@include size-sm{
+  .tag {
+    &-s {
+      padding: 4px 8px;
+      font-size: 12px;
+      margin: 8px;
+    }
+  }
+}
+
 .tag-yellow {
   font-weight: 500;
   line-height: 1.4;
