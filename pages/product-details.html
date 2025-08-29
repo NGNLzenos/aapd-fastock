@@ -46,70 +46,74 @@
 
             <!-- 照片區-主照片 -->
               <div class="position-relative mb-3">
-                  <img class="rounded-5" src="/assets/images/產品詳細頁/product-image.png" alt="">
-                  <div>
-                    <!-- 試用按鈕 - 互動 -->
-                    <div class="d-flex gap-3 position-absolute bottom-0 end-0 m-3">
-                      <button type="button" class="btn btn-sec-outline shadow " data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        試用
-                      </button>
-                      <button type="button" class="btn btn-sec-outline shadow ">探索相似</button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg
-                          class="icon-heart"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                    </div>
+                <img class="rounded-5" src="/assets/images/產品詳細頁/product-image.png" alt="">
+                <div>
+                  <!-- 試用按鈕 - 互動 -->
+                  <div class="d-flex gap-3 position-absolute bottom-0 end-0 m-3">
+                    <button type="button" class="btn btn-sec-outline shadow " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      試用
+                    </button>
+                    <button type="button" class="btn btn-sec-outline shadow ">
+                      探索相似
+                    </button>
+                    <button type="button" class="inCardFav icon-M shadow">
+                      <svg
+                        class="icon-heart"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          class="heart-path"
+                          d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </div>
 
-                    <!-- 試用鈕 - 互動樣式展開內容 -->
-                    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered  modal-dialog-try">
-                        <div class="modal-content">
-                          <div class="modal-header border-0 pb-0">
-                            <h5 class="modal-title fs-6" id="exampleModalLabel">素材試用</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <!-- 試用鈕 - 互動樣式展開內容 -->
+                  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered  modal-dialog-try">
+                      <div class="modal-content">
+                        <div class="modal-header border-0 pb-0">
+                          <h5 class="modal-title fs-6" id="exampleModalLabel">素材試用</h5>
+                          <button type="button" class="btn-close trybtn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body p-6">
+                          <div class="d-flex align-items-center justify-content-between mb-6">
+                            <div class="w-85 h-547px">
+                              <img src="/assets/images/產品詳細頁/product-image.png" class="rounded-5 w-100 h-100  choose-normal " alt="">
+                              <img src="/assets/images/產品詳細頁/porduct-cut-part.png" class="rounded-5 w-100  h-100 choose-cut-img d-none" alt="">
+                              <img src="/assets/images/產品詳細頁/porduct-nobg.png" class="rounded-5 w-100 h-100 choose-only d-none" alt="">
+                            </div>
+                            <div class="w-15 d-flex flex-column gap-3 text-end ">
+                              <div>
+                                <button class="btn bg-primary-50 py-4 px-3 text-center choose-cut-btn">
+                                  <img src="/assets/images/icon/icon-blue-crop.svg" alt="">
+                                  <p class="text-primary-600">局部選取</p>
+                                </button>
+                              </div>
+                              <div>
+                                <button class="btn bg-primary-50 py-4 px-3 text-center ai-nobg-btn">
+                                  <img src="/assets/images/icon/icon-removebg-blue.svg" alt="">
+                                  <p class="text-primary-600">智能去背</p>
+                                </button>
+                              </div>
+                            </div>
                           </div>
-
-                          <div class="modal-body p-6">
-                            <div class="d-flex align-items-center justify-content-between mb-6">
-                              <div class="w-85">
-                                <img src="/assets/images/產品詳細頁/product-image.png" class="rounded-5 w-100" alt="">
-                              </div>
-                              <div class="w-15 d-flex flex-column gap-3 text-end ">
-                                <div>
-                                  <button class="btn bg-primary-50 py-4 px-3 text-center">
-                                    <img src="/assets/images/icon/icon-blue-crop.svg" alt="">
-                                    <p class="text-primary-600">局部選取</p>
-                                  </button>
-                                </div>
-                                <div>
-                                  <button class="btn bg-primary-50 py-4 px-3 text-center">
-                                    <img src="/assets/images/icon/icon-removebg-blue.svg" alt="">
-                                    <p class="text-primary-600">局部選取</p>
-                                  </button>
-                                </div>
-                                
-                              </div>
-                            </div>
-                            <div class="d-flex gap-4 justify-content-center">
-                              <button type="button" class="btn btn-sec-outline">PNG下載</button>
-                              <button type="button" class="btn btn-sec-outline">複製到剪貼簿</button>
-                            </div>
+                          <div class="d-flex gap-4 justify-content-center">
+                            <a href="/aapd-fastock/product-image-cut.png" class="btn btn-sec-outline" download="cat-cut.png" class="btn btn-pr-noneline ms-auto fw-medium border-0">PNG下載</a>
+                            <button type="button" id="copy-image-btn" class="btn btn-sec-outline">複製到剪貼簿
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
               </div>
 
               <!-- 關於 -->
@@ -802,6 +806,75 @@
           // 確認跳轉
           window.location.href = "checkout.html"; // ← 確認 checkout.html 路徑是否正確
         });
+      });
+
+      const chooseCutBtn = document.querySelector(".choose-cut-btn");
+      const aiNobgBtn = document.querySelector(".ai-nobg-btn");
+      const chooseNormal = document.querySelector(".choose-normal");
+      const chooseCutImg = document.querySelector(".choose-cut-img");
+      const chooseOnly = document.querySelector(".choose-only");
+      const trybtnClose = document.querySelector(".trybtn-close");
+
+      trybtnClose.addEventListener("click", () => {
+        chooseNormal.classList.remove("d-none");
+        chooseCutImg.classList.add("d-none");
+        chooseOnly.classList.add("d-none");
+        chooseCutBtn.classList.remove("cut-btn-active");
+      });
+
+
+      function updateDisplay() {
+        const isCutActive = chooseCutBtn.classList.contains("cut-btn-active");
+        const isAiActive = aiNobgBtn.classList.contains("cut-btn-active");
+        
+        chooseNormal.classList.add("d-none");
+        chooseCutImg.classList.add("d-none");
+        chooseOnly.classList.add("d-none");
+        
+        if (isAiActive) {
+          chooseOnly.classList.remove("d-none");
+        } else if (isCutActive) {
+          chooseCutImg.classList.remove("d-none");
+        } else {
+          chooseNormal.classList.remove("d-none");
+        }
+      }
+
+      chooseCutBtn.addEventListener("click", () => {
+        chooseCutBtn.classList.toggle("cut-btn-active");
+        updateDisplay();
+      });
+
+      aiNobgBtn.addEventListener("click", () => {
+        aiNobgBtn.classList.toggle("cut-btn-active");
+        updateDisplay();
+      });
+
+      // 不使用 clipboard.js，直接用原生 API
+      const copyImageBtn = document.getElementById('copy-image-btn');
+
+      copyImageBtn.addEventListener('click', async () => {
+        try {
+          const response = await fetch('/aapd-fastock/product-image-cut.png');
+          const blob = await response.blob();
+          
+          await navigator.clipboard.write([
+            new ClipboardItem({ 'image/png': blob })
+          ]);
+          
+          // 成功提示
+          copyImageBtn.textContent = '已複製圖片！';
+          copyImageBtn.classList.add('btn-success');
+          
+          setTimeout(() => {
+            copyImageBtn.textContent = '複製到剪貼簿';
+            copyImageBtn.classList.remove('btn-success');
+          }, 2000);
+          
+        } catch (err) {
+          console.error('複製失敗:', err);
+        
+        }
       });
 
 

@@ -92,16 +92,17 @@
                     <br> 註冊成為會員</h4>
                   <p class="fs-sm fw-bold">註冊帳號，保留購買記錄更方便</p>
                 </div>
-                <div class="w-331px">
+
+                <form class="w-331px" novalidate id="registerForm">
                   <div class="mb-6 position-relative">
-                    <input type="password" class="form-control py-3 px-4 rounded-5" id="checkpassword1" placeholder="輸入密碼">
+                    <input type="password" class="form-control py-3 px-4 rounded-5" id="checkpassword1" placeholder="輸入密碼" required>
                     <button type="button" class="btn p-0 position-absolute top-50 end-0 translate-middle-y me-3 toggle-password" data-target="checkpassword1">
                       <img src="/assets/images/icon/icon-eyes-close.svg" class="icon-eye" alt="">
                     </button>
                   </div>
                   <div class="">
                     <div class="position-relative">
-                      <input type="password" class="form-control py-3 px-4 rounded-5" id="checkpassword2" placeholder="再次輸入密碼">
+                      <input type="password" class="form-control py-3 px-4 rounded-5" id="checkpassword2" placeholder="再次輸入密碼" required>
                       <button type="button" class="btn p-0 position-absolute top-50 end-0 translate-middle-y me-3 toggle-password" data-target="checkpassword2">
                         <img src="/assets/images/icon/icon-eyes-close.svg" class="icon-eye" alt="">
                       </button>
@@ -111,32 +112,16 @@
                     </div>
                   </div>
 
-                  <button class="btn btn-pr w-100" type="button">快速註冊</button>
+                  <button class="btn btn-pr w-100" type="submit" id="submitBtn" disabled>快速註冊</button>
+                </form>
 
+              </div>
+            </div>
 
-                  <form id="registerForm" novalidate>
-                    <div class="mb-6 position-relative">
-                      <input type="password" class="form-control py-3 px-4 rounded-5" id="checkpassword1" placeholder="輸入密碼" required>
-                      <button type="button" class="btn p-0 position-absolute top-50 end-0 translate-middle-y me-3 toggle-password" data-target="checkpassword1">
-                        <img src="/assets/images/icon/icon-eyes-close.svg" class="icon-eye" alt="">
-                      </button>
-                    </div>
-
-                    <div class="position-relative mb-3">
-                      <input type="password" class="form-control py-3 px-4 rounded-5" id="checkpassword2" placeholder="再次輸入密碼" required>
-                      <button type="button" class="btn p-0 position-absolute top-50 end-0 translate-middle-y me-3 toggle-password" data-target="checkpassword2">
-                        <img src="/assets/images/icon/icon-eyes-close.svg" class="icon-eye" alt="">
-                      </button>
-                    </div>
-
-                    <div id="assword" class="form-text my-3 px-1">
-                      *至少 8 個字元。必須至少包含以下字元之一：大寫字母、小寫字母、數字和符號。
-                    </div>
-
-                    <button class="btn btn-pr w-100" type="submit" id="submitBtn" disabled>快速註冊</button>
-                    </form>
-
-                </div>
+            <div class="success-register d-none bg-secondary-100 py-7">
+              <div class="text-center">
+                <h3 class="fs-6 mb-2">🎉 註冊成功 🎉</h3>
+                <a href="index.html" class="text-decoration-underline text-secondary-900">繼續購物</a>
               </div>
             </div>
           </div>
@@ -150,6 +135,7 @@
     <script type="module" src="../main.js"></script>
     <script src="dist/clipboard.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script>
       new ClipboardJS('.copy-btn');
@@ -245,6 +231,31 @@
           btn.textContent = "下載購買明細";
         }
       });
+
+      const form = document.getElementById("registerForm");
+      const submitBtn = document.getElementById("submitBtn");
+      const expRegister = document.querySelector(".exp-register");
+      const successRegister = document.querySelector(".success-register");
+
+
+      // 監聽必填欄位 input，控制按鈕 disable/enable
+      form.querySelectorAll("input[required]").forEach(input => {
+        input.addEventListener("input", () => {
+          const allFilled = Array.from(form.querySelectorAll("input[required]"))
+            .every(field => field.value.trim() !== "");
+          submitBtn.disabled = !allFilled;
+        });
+      });
+
+
+      // 表單送出事件
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        expRegister.classList.add("d-none");
+        successRegister.classList.remove("d-none");
+        
+      });
+
 
 
 
