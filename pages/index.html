@@ -101,38 +101,38 @@
         </ul>
         <div class="tab-content" id="pills-tabContent">
           <div
-            class="tab-pane fade show active"
+            class="tab-pane fade show active d-flex flex-column gap-4 gap-md-2"
             id="pills-popular"
             role="tabpanel"
             aria-labelledby="pills-popular-tab"
           >
             <!-- 精選區 -->
-            <div class="featured">
+            <div class="container px-4 px-md-0 my-md-3">
               <div
-                class="d-flex justify-content-between align-items-center mb-3"
+                class="swiper-header d-flex justify-content-between align-items-center mb-3"
               >
                 <h3 class="fs-5 fw-bold">精選</h3>
-                <div
-                  class="section-bar d-flex justify-content-between align-items-center"
-                >
-                  <div class="btn-group me-2">
-                    <button
-                      type="button"
-                      class="icon-secondary-outline icon-S me-2"
-                      disabled
-                    >
-                      <img
-                        src="/assets/images/icon/icon-left.svg"
-                        alt="left-chervon"
-                      />
-                    </button>
-                    <button type="button" class="icon-secondary-outline icon-S">
-                      <img
-                        src="/assets/images/icon/icon-right.svg"
-                        alt="right-chervon"
-                      />
-                    </button>
-                  </div>
+                <div class="swiper-nav d-flex align-items-center gap-2">
+                  <button
+                    type="button"
+                    class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex"
+                    id="my-prev"
+                  >
+                    <img
+                      src="/assets/images/icon/icon-left.svg"
+                      alt="icon-left"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex"
+                    id="my-next"
+                  >
+                    <img
+                      src="/assets/images/icon/icon-right.svg"
+                      alt="icon-right"
+                    />
+                  </button>
                   <a
                     href="#"
                     class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
@@ -141,276 +141,188 @@
                   >
                 </div>
               </div>
-            </div>
-            <div class="row gx-5">
-              <div class="col-3">
-                <div class="card border-0">
-                  <div class="position-relative">
-                    <div class="tag-m tag-pink"></div>
-                    <div class="inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg
-                          class="icon-cart-outline"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg
-                          class="icon-heart"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="gradient rounded-4 feature-card-img"></div>
-                    <img
-                      src="/assets/images/Homepage/card 1.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
-                      alt="貓咪家庭"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title fs-lg fw-bold">貓咪家庭</h5>
-                    <div class="card-text d-flex justify-content-between">
-                      <p>相片</p>
-                      <p>$100</p>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 1.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="貓咪家庭"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          貓咪家庭
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card border-0">
-                  <div class="position-relative">
-                    <div class="tag-m tag-pink"></div>
-                    <div class="inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg
-                          class="icon-cart-outline"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg
-                          class="icon-heart"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="gradient rounded-4 feature-card-img"></div>
-                    <img
-                      src="/assets/images/Homepage/card 2.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
-                      alt="雪山日出空拍景觀圖"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title fs-lg fw-bold">雪山日出空拍景觀圖</h5>
-                    <div class="card-text d-flex justify-content-between">
-                      <p>相片</p>
-                      <p>$100</p>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 2.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="雪山日出空拍景觀圖"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          雪山日出空拍景觀圖
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card border-0">
-                  <div class="position-relative">
-                    <div class="tag-m tag-pink"></div>
-                    <div class="inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg
-                          class="icon-cart-outline"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg
-                          class="icon-heart"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="gradient rounded-4 feature-card-img"></div>
-                    <img
-                      src="/assets/images/Homepage/card 3.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
-                      alt="商業品牌報告紙樣板"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title fs-lg fw-bold">商業品牌報告紙樣板</h5>
-                    <div class="card-text d-flex justify-content-between">
-                      <p>範本</p>
-                      <p>$100</p>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 3.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="商業品牌報告紙樣板"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          商業品牌報告紙樣板
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card border-0">
-                  <div class="position-relative">
-                    <div class="tag-m tag-pink"></div>
-                    <div class="inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg
-                          class="icon-cart-outline"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg
-                          class="icon-heart"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 4.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="抽象藝術"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          抽象藝術
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>圖形</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="gradient rounded-4 feature-card-img"></div>
-                    <img
-                      src="/assets/images/Homepage/card 4.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
-                      alt="抽象藝術"
-                    />
                   </div>
-                  <div class="card-body">
-                    <h5 class="card-title fs-lg fw-bold">抽象藝術</h5>
-                    <div class="card-text d-flex justify-content-between">
-                      <p>圖形</p>
-                      <p>$100</p>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 5.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="優雅手寫風英文字體"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          優雅手寫風英文字體
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 6.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="極簡幾何無襯線字體"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          極簡幾何無襯線字體
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- 字型區 -->
-            <div class="featured">
+            <div class="container px-4 px-md-0 my-md-3">
               <div
-                class="d-flex justify-content-between align-items-center mb-3"
+                class="swiper-header d-flex justify-content-between align-items-center mb-3"
               >
                 <h3 class="fs-5 fw-bold">字型</h3>
-                <div
-                  class="section-bar d-flex justify-content-between align-items-center"
-                >
-                  <div class="btn-group me-2">
-                    <button
-                      type="button"
-                      class="icon-secondary-outline icon-S me-2"
-                      disabled
-                    >
-                      <img
-                        src="/assets/images/icon/icon-left.svg"
-                        alt="left-chervon"
-                      />
-                    </button>
-                    <button type="button" class="icon-secondary-outline icon-S">
-                      <img
-                        src="/assets/images/icon/icon-right.svg"
-                        alt="right-chervon"
-                      />
-                    </button>
-                  </div>
+                <div class="swiper-nav d-flex align-items-center gap-2">
+                  <button
+                    type="button"
+                    class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex"
+                    id="my-prev"
+                  >
+                    <img
+                      src="/assets/images/icon/icon-left.svg"
+                      alt="icon-left"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex"
+                    id="my-next"
+                  >
+                    <img
+                      src="/assets/images/icon/icon-right.svg"
+                      alt="icon-right"
+                    />
+                  </button>
                   <a
                     href="#"
                     class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
@@ -419,252 +331,163 @@
                   >
                 </div>
               </div>
-            </div>
-            <div class="row gx-5">
-              <div class="col-3">
-                <div class="card border-0">
-                  <div class="position-relative">
-                    <div class="tag-m tag-yellow"></div>
-                    <div class="inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg
-                          class="icon-cart-outline"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg
-                          class="icon-heart"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="gradient rounded-4 feature-card-img"></div>
-                    <img
-                      src="/assets/images/Homepage/card 5.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
-                      alt="優雅手寫風英文字體"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title fs-lg fw-bold">優雅手寫風英文字體</h5>
-                    <div class="card-text d-flex justify-content-between">
-                      <p>字型</p>
-                      <p>$100</p>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 5.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="優雅手寫風英文字體"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          優雅手寫風英文字體
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card border-0">
-                  <div class="position-relative">
-                    <div class="tag-m tag-yellow"></div>
-                    <div class="inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg
-                          class="icon-cart-outline"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg
-                          class="icon-heart"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="gradient rounded-4 feature-card-img"></div>
-                    <img
-                      src="/assets/images/Homepage/card 6.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
-                      alt="極簡幾何無襯線字體"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title fs-lg fw-bold">極簡幾何無襯線字體</h5>
-                    <div class="card-text d-flex justify-content-between">
-                      <p>字型</p>
-                      <p>$100</p>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 6.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="極簡幾何無襯線字體"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          極簡幾何無襯線字體
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card border-0">
-                  <div class="position-relative">
-                    <div class="tag-m tag-yellow"></div>
-                    <div class="inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg
-                          class="icon-cart-outline"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg
-                          class="icon-heart"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="gradient rounded-4 feature-card-img"></div>
-                    <img
-                      src="/assets/images/Homepage/card 7.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
-                      alt="粗體手繪感英文字體"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title fs-lg fw-bold">粗體手繪感英文字體</h5>
-                    <div class="card-text d-flex justify-content-between">
-                      <p>字型</p>
-                      <p>$100</p>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 7.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="粗體手繪感英文字體"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          粗體手繪感英文字體
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card border-0">
-                  <div class="position-relative">
-                    <div class="tag-m tag-yellow"></div>
-                    <div
-                      class="inCardBtnGroup inCardPosition-16 card-btn-hover"
-                    >
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg
-                          class="icon-cart-outline"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg
-                          class="icon-heart"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 8.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="經典美式書寫體字型"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          經典美式書寫體字型
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="gradient rounded-4 feature-card-img"></div>
-                    <img
-                      src="/assets/images/Homepage/card 8.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
-                      alt="經典美式書寫體字型"
-                    />
                   </div>
-                  <div class="card-body">
-                    <h5 class="card-title fs-lg fw-bold">經典美式書寫體字型</h5>
-                    <div class="card-text d-flex justify-content-between">
-                      <p>字型</p>
-                      <p>$100</p>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 5.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="優雅手寫風英文字體"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          優雅手寫風英文字體
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 6.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="極簡幾何無襯線字體"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          極簡幾何無襯線字體
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>字型</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <section class="CTA d-flex align-items-center rounded-6">
+            <!-- 成為創作者CTA -->
+            <section class="c-cta d-flex align-items-center rounded-6">
               <div class="card-text">
                 <h2 class="fs-3 fw-bold mb-5">成為創作者</h2>
                 <p class="mb-5">
@@ -679,6 +502,503 @@
                 </button>
               </div>
             </section>
+            <!-- 範本區 -->
+            <div class="container px-4 px-md-0 my-md-3">
+              <div
+                class="swiper-header d-flex justify-content-between align-items-center mb-3"
+              >
+                <h3 class="fs-5 fw-bold">範本</h3>
+                <div class="swiper-nav d-flex align-items-center gap-2">
+                  <button
+                    type="button"
+                    class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex"
+                    id="my-prev"
+                  >
+                    <img
+                      src="/assets/images/icon/icon-left.svg"
+                      alt="icon-left"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex"
+                    id="my-next"
+                  >
+                    <img
+                      src="/assets/images/icon/icon-right.svg"
+                      alt="icon-right"
+                    />
+                  </button>
+                  <a
+                    href="#"
+                    class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
+                    role="button"
+                    >查看更多</a
+                  >
+                </div>
+              </div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 9.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="紫色數位提案模擬稿"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          紫色數位提案模擬稿
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 3.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="商業品牌報告紙樣板"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          商業品牌報告紙樣板
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 10.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="質感名片展示模板"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          質感名片展示模板
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 11.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="撕貼風格貼紙樣機組"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          撕貼風格貼紙樣機組
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 9.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="紫色數位提案模擬稿"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          紫色數位提案模擬稿
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 3.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="商業品牌報告紙樣板"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          商業品牌報告紙樣板
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 10.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="質感名片展示模板"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          質感名片展示模板
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 11.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="撕貼風格貼紙樣機組"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          撕貼風格貼紙樣機組
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>範本</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 相片區 -->
+            <div class="container px-4 px-md-0 my-md-3">
+              <div
+                class="swiper-header d-flex justify-content-between align-items-center mb-3"
+              >
+                <h3 class="fs-5 fw-bold">相片</h3>
+                <div class="swiper-nav d-flex align-items-center gap-2">
+                  <button
+                    type="button"
+                    class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex"
+                    id="my-prev"
+                  >
+                    <img
+                      src="/assets/images/icon/icon-left.svg"
+                      alt="icon-left"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex"
+                    id="my-next"
+                  >
+                    <img
+                      src="/assets/images/icon/icon-right.svg"
+                      alt="icon-right"
+                    />
+                  </button>
+                  <a
+                    href="#"
+                    class="fs-md fw-medium letter-spacing-sm icon-primary-nonline icon-M text-btn"
+                    role="button"
+                    >查看更多</a
+                  >
+                </div>
+              </div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 12.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="未來感藍球體藝術構圖"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          未來感藍球體藝術構圖
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 13.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="極簡山丘風景照"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          極簡山丘風景照
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 2.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="雪山日出空拍景觀圖"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          雪山日出空拍景觀圖
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 14.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="綠眼長毛貓側臉寫真"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          綠眼長毛貓側臉寫真
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 12.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="未來感藍球體藝術構圖"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          未來感藍球體藝術構圖
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 13.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="極簡山丘風景照"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          極簡山丘風景照
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 2.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="雪山日出空拍景觀圖"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          雪山日出空拍景觀圖
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <!-- 卡片圖片區 -->
+                      <div class="position-relative overflow-hidden rounded-4">
+                        <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                        <div class="d-sm-none tag-s tag-yellow"></div>
+                        <%- include('./layout/inCardBtn.ejs'); -%>
+                        <img
+                          src="/assets/images/Homepage/card 14.png"
+                          class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden"
+                          alt="綠眼長毛貓側臉寫真"
+                        />
+                      </div>
+                      <!-- 卡片描述區 -->
+                      <div class="card-body">
+                        <h5 class="card-title fs-md fs-md-lg fw-bold">
+                          綠眼長毛貓側臉寫真
+                        </h5>
+                        <div class="card-text d-flex justify-content-between">
+                          <p>相片</p>
+                          <p>$100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 查看更多 -->
+            <div class="d-flex justify-content-center my-0 my-md-8">
+              <button
+                type="button"
+                class="d-none d-md-block btn btn-sec-outline fs-md fw-medium letter-spacing-sm"
+              >
+                查看更多
+              </button>
+              <button
+                type="button"
+                class="d-md-none btn-sm btn-sec-outline fs-sm fw-medium letter-spacing-sm"
+              >
+                查看更多
+              </button>
+            </div>
+            <!-- 加入會員CTA -->
+            <section class="m-cta"></section>
           </div>
         </div>
         <div
@@ -703,8 +1023,6 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
-    <!-- dropdown section -->
-    <script></script>
     <!-- offcanvas submenu -->
     <script>
       // offcanvas submenu
@@ -737,27 +1055,41 @@
         }
       });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
-            const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'vertical',
-        loop: true,
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        freeMode: false,
 
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".my-next-btn",
+          prevEl: ".my-prev-btn",
         },
 
-        // And if we need scrollbar
-        scrollbar: {
-          el: '.swiper-scrollbar',
+        breakpoints: {
+          375: {
+            slidesPerView: 2,
+            spaceBetween: 12,
+          },
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
         },
+        effect: "slide",
+        mousewheel: {
+          revert: true,
+        },
+        speed: 400,
       });
     </script>
   </body>
