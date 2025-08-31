@@ -1,45 +1,55 @@
 .hero {
   width: 100%;
   height: 280px;
+  padding-left: 10%;
   background-color: $secondary-100;
-  background-image: url(/assets/images/Homepage/section-hero.svg);
+  background-image: url(/assets/images/Homepage/hero-main.svg);
   background-size: fill;
-  background-position: center;
+  background-position: right 8vw center;
   background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    padding-left: 0;
+    height: auto;
+    background-image: url(/assets/images/Homepage/section-hero-mobile.svg);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    aspect-ratio: 1.618/1;
+  }
 }
 .color-block {
   background-color: $accent;
 }
-.ps-148 {
-  padding-left: 10%;
-}
 // 膠囊選單設定
-.category .nav-pills{
+.category .nav-pills {
   width: 340px;
   border-radius: 20px;
   background-color: $secondary-100;
-  .nav-link{
+  .nav-link {
     color: #000;
     background-color: transparent;
     padding: 8px 32px;
     border-radius: 12px;
-    &:hover{
+    &:hover {
       background-color: rgba(0, 0, 0, 0.05);
     }
-    &:focus, &:active{
+    &:focus,
+    &:active,
+    &.active {
       color: $white;
       background-color: #000;
     }
   }
 }
 // 查看更多 按鈕的大小
-.text-btn{
+.text-btn {
   width: 113px;
 }
 
 // 卡片區設定
-.feature-card-img{
-  width: 305px;
+.feature-card-img {
+  max-width: 305px;
+  width: 100%;
   height: 302px;
 }
 
@@ -55,7 +65,8 @@
 }
 
 // CTA
-.CTA{
+// creator cta
+.c-cta {
   position: relative;
   width: 100%;
   height: 300px;
@@ -65,15 +76,49 @@
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
-  .card-text{
+  .card-text {
     width: 428px;
     padding-left: 150px;
   }
-  
 }
+// membership cta
 
-.join-btn{
+.join-btn {
   width: 200px;
   border-radius: 16px;
   padding: 12px 24px;
+}
+
+// swiper nav btn
+// 先隱藏原始按鈕
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.mySwiper .card {
+  width: calc((100% - 60px)) / 4;
+  border: none;
+  @media (max-width: 576px) {
+    width: calc((100% - 44px)) / 2;
+    img {
+      height: 150px;
+      object-fit: cover;
+      object-position: center;
+      overflow: hidden;
+    }
+  }
+}
+.name-tag {
+  color: $white;
+  z-index: 200;
+}
+
+.mySwiper .card {
+  .name-tag {
+    display: none;
+  }
+  &:hover .name-tag {
+    display: block;
+  }
 }
